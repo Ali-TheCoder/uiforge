@@ -18,7 +18,7 @@ export default function HomePage() {
             UI Forge builds elegant, fast websites that look premium—and sell.
           </h1>
           <p className="text-base text-muted md:text-lg">
-            We’re a two-person design & development studio crafting modern company sites, e-commerce storefronts,
+             Design & Development  crafting modern company sites, e-commerce storefronts,
             and custom web apps with a strong UI system.
           </p>
 

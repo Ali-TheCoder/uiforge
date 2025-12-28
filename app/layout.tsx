@@ -28,7 +28,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "UI Forge — Web Design & Development Studio",
-  description: "UI Forge is a two-person design & development studio building fast, elegant Next.js websites.",
+  description: "UI Forge is a  design & development studio building fast, elegant Next.js websites.",
 };
 
 function Background() {
