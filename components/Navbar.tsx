@@ -6,6 +6,7 @@ const nav = [
     { href: "/pricing", label: "Pricing" },
     { href: "/work", label: "Work" },
     { href: "/contact", label: "Contact" },
+    {href:"/about",label:"About"}
 ];
 
 export default function Navbar() {
