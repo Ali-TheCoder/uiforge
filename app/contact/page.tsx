@@ -2,15 +2,15 @@
 
 import { useState } from "react";
 import Button from "@/components/Button";
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
 
 
 export default function ContactPage() {
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState<string | null>(null);
     const [error, setError] = useState<string | null>(null);
-    const searchParams = useSearchParams();
-    const defaultPlan = searchParams.get("plan");
+    // const searchParams = useSearchParams();
+    // const defaultPlan = searchParams.get("plan");
 
 
 
