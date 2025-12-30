@@ -23,7 +23,7 @@ export default function About(){
     
         {/* Header Section */}
         <div className="text-start  flex flex-col items-start mb-16">
-          <h1 className="mb-6 text-5xl mx-auto">About Us</h1>
+          <h1 className="mb-3 text-5xl mx-auto">About Us</h1>
           <p className="
             mx-auto
             max-w-xl sm:max-w-2xl lg:max-w-3xl

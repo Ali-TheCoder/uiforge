@@ -3,6 +3,8 @@ import Link from "next/link";
 import Button from "@/components/Button";
 import PricingCards from "@/components/PricingCards";
 import { motion } from "motion/react"
+import About from "../components/about/about";
+import ProcessSection from "@/components/Process/process";
 export default function HomePage() {
   return (
     <div className="space-y-16">
@@ -42,19 +44,9 @@ export default function HomePage() {
           </div>
         </motion.div>
       </section>
+      <About />
 
-      <section className="grid gap-4 md:grid-cols-3">
-        {[
-          { t: "Premium UI", d: "Clean typography, spacing, and component consistency." },
-          { t: "Performance", d: "Next.js-first builds with smart routing & modern patterns." },
-          { t: "Conversion-ready", d: "Clear CTA, sections that explain value, and SEO basics." },
-        ].map((c) => (
-          <div key={c.t} className="rounded-3xl border border-white/10 bg-white/5 p-6">
-            <div className="text-lg font-semibold">{c.t}</div>
-            <div className="mt-2 text-sm text-muted">{c.d}</div>
-          </div>
-        ))}
-      </section>
+     <ProcessSection />
 
       <section className="space-y-5">
         <div className="flex items-end justify-between gap-4">
