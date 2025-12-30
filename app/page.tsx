@@ -1,16 +1,23 @@
+"use client"
 import Link from "next/link";
 import Button from "@/components/Button";
 import PricingCards from "@/components/PricingCards";
-
+import { motion } from "motion/react"
+import About from "../components/about/about";
+import ProcessSection from "@/components/Process/process";
 export default function HomePage() {
   return (
     <div className="space-y-16">
-      <section className="relative overflow-hidden rounded-2rem border border-white/10 bg-black/10 p-8 md:p-12">
+      <section className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black/10 p-8 md:p-12">
         <div className="absolute inset-0 opacity-40 mask-[radial-gradient(600px_260px_at_30%_20%,black,transparent)]">
           <div className="h-full w-full bg-[conic-gradient(from_180deg_at_50%_50%,var(--color-primary),var(--color-secondary),var(--color-accent),var(--color-primary))]" />
         </div>
 
-        <div className="relative max-w-2xl space-y-5">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="relative max-w-2xl space-y-5">
           <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-muted">
             Next.js • Tailwind • TypeScript
           </p>
@@ -35,21 +42,11 @@ export default function HomePage() {
               get in touch
             </Link>
           </div>
-        </div>
+        </motion.div>
       </section>
+      <About />
 
-      <section className="grid gap-4 md:grid-cols-3">
-        {[
-          { t: "Premium UI", d: "Clean typography, spacing, and component consistency." },
-          { t: "Performance", d: "Next.js-first builds with smart routing & modern patterns." },
-          { t: "Conversion-ready", d: "Clear CTA, sections that explain value, and SEO basics." },
-        ].map((c) => (
-          <div key={c.t} className="rounded-3xl border border-white/10 bg-white/5 p-6">
-            <div className="text-lg font-semibold">{c.t}</div>
-            <div className="mt-2 text-sm text-muted">{c.d}</div>
-          </div>
-        ))}
-      </section>
+     <ProcessSection />
 
       <section className="space-y-5">
         <div className="flex items-end justify-between gap-4">
