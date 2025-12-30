@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import Button from "@/components/Button";
 // import { useSearchParams } from "next/navigation";
 
@@ -13,8 +13,8 @@ export default function ContactPage() {
     // const defaultPlan = searchParams.get("plan");
 
 
-
-    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+   
+    async function handleSubmit(e: FormEvent<HTMLFormElement>) { 
         e.preventDefault();
         setLoading(true);
         setSuccess(null);
