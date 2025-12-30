@@ -1,16 +1,21 @@
+"use client"
 import Link from "next/link";
 import Button from "@/components/Button";
 import PricingCards from "@/components/PricingCards";
-
+import { motion } from "motion/react"
 export default function HomePage() {
   return (
     <div className="space-y-16">
-      <section className="relative overflow-hidden rounded-2rem border border-white/10 bg-black/10 p-8 md:p-12">
+      <section className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black/10 p-8 md:p-12">
         <div className="absolute inset-0 opacity-40 mask-[radial-gradient(600px_260px_at_30%_20%,black,transparent)]">
           <div className="h-full w-full bg-[conic-gradient(from_180deg_at_50%_50%,var(--color-primary),var(--color-secondary),var(--color-accent),var(--color-primary))]" />
         </div>
 
-        <div className="relative max-w-2xl space-y-5">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="relative max-w-2xl space-y-5">
           <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-muted">
             Next.js • Tailwind • TypeScript
           </p>
@@ -35,7 +40,7 @@ export default function HomePage() {
               get in touch
             </Link>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <section className="grid gap-4 md:grid-cols-3">
