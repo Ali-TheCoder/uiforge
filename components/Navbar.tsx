@@ -3,11 +3,11 @@ import Button from "@/components/Button";
 import Image from "next/image";
 
 const nav = [
-    { href: "/pricing", label: "Pricing" },
-    { href: "#portfolio", label: "Portfolio" },
-    { href: "/contact", label: "Contact" },
-    {href:"#process" , label:"Process"},
-    {href:"#about",label:"About"}
+    { href: "/pricing", label: "Pricing",id:"1" },
+    { href: "#portfolio", label: "Portfolio",id:"2" },
+    { href: "/contact", label: "Contact",id:"3" },
+    {href:"#process" , label:"Process",id:"4"},
+    {href:"#about",label:"About",id:"5"}
 ];
 
 export default function Navbar() {
@@ -39,7 +39,7 @@ export default function Navbar() {
 
                 <nav className="hidden items-center gap-6 md:flex">
                     {nav.map((i) => (
-                        <a key={i.href} href={i.href} className="text-sm text-muted hover:text-text">
+                        <a key={i.id} href={i.href} className="text-sm text-muted hover:text-text">
                             {i.label}
                         </a>
                     ))}

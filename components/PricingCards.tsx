@@ -40,8 +40,8 @@ export default function PricingCards() {
                     </div>
 
                     <ul className="mt-4 space-y-2 text-sm text-muted">
-                        {p.features.map((f) => (
-                            <li key={f} className="flex gap-2">
+                        {p.features.map((f,index) => (
+                            <li key={index} className="flex gap-2">
                                 <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-secondary/80" />
                                 <span>{f}</span>
                             </li>
