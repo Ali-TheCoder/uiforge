@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/card";
 
-export default function Page(){
+export default function About(){
     const teamMembers = [
     {
       id: 1,
@@ -19,38 +19,40 @@ export default function Page(){
   ];
 
   return (
-    <div className="min-h-screen">
-      <div className="max-w-6xl mx-auto px-6 py-10">
+    <section id="about" className="flex flex-col justify-between rounded-[2rem] border border-white/10 bg-black/10 p-8 md:p-12">
+    
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <h1 className="mb-6 text-2xl">About Us</h1>
+        <div className="text-start  flex flex-col items-start mb-16">
+          <h1 className="mb-6 text-5xl mx-auto">About Us</h1>
           <p className="
             mx-auto
             max-w-xl sm:max-w-2xl lg:max-w-3xl
             px-4 sm:px-0
             text-sm sm:text-base lg:text-lg
             leading-relaxed sm:leading-7 lg:leading-8
-            text-slate-400
+            text-slate-400  text-muted flex flex-col gap-1
             ">
-                We’re a design and development studio focused on building thoughtful, modern digital experiences.
-                From polished company websites to high-performing e-commerce storefronts and fully custom web applications, we handle projects end to end.
-                Our work is grounded in strong UI systems—scalable, consistent, and intuitive—ensuring every product not only looks great but is easy to use, maintain, and grow with your business.
+            <span> We’re a design and development studio focused on building thoughtful, modern digital experiences.</span>
+            <span>From polished company websites to high-performing e-commerce storefronts and fully custom web applications, we handle projects end to end.</span>
+            <span>Our work is grounded in strong UI systems—scalable, consistent, and intuitive—ensuring every product not only looks great but is easy to use, maintain, and grow with your business.</span>
+            
             </p>
 
         </div>
 
         {/* Team Members Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-4">
           {teamMembers.map((member) => (
-            <Card key={member.id} className="overflow-hidden hover:shadow-lg transition-shadow border-1 border-slate-700 duration-300">
-              <div className="aspect-[4/3] overflow-hidden bg-slate-200">
+            <Card key={member.id} className="overflow-hidden hover:shadow-lg transition-shadow 
+            border-1 border-slate-700 duration-300 relative  rounded-3xl p-3 backdrop-blur-xl">
+              <div className="aspect-[1.4567] overflow-hidden  bg-slate-200">
                 <img
-                  src={member.image}
+                  src={member.image} 
                   alt={member.name}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <CardContent className="p-6">
+              <CardContent className="">
                 <h3 className="mb-1">{member.name}</h3>
                 <p className="text-slate-300 mb-4">{member.role}</p>
                 <p className="text-slate-400">
@@ -60,7 +62,7 @@ export default function Page(){
             </Card>
           ))}
         </div>
-      </div>
-    </div>
+
+    </section>
   );
 }

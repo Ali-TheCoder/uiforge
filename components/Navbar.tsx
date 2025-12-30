@@ -6,7 +6,7 @@ const nav = [
     { href: "/pricing", label: "Pricing" },
     { href: "/work", label: "Work" },
     { href: "/contact", label: "Contact" },
-    {href:"/about",label:"About"}
+    {href:"#about",label:"About"}
 ];
 
 export default function Navbar() {
@@ -38,9 +38,9 @@ export default function Navbar() {
 
                 <nav className="hidden items-center gap-6 md:flex">
                     {nav.map((i) => (
-                        <Link key={i.href} href={i.href} className="text-sm text-muted hover:text-text">
+                        <a key={i.href} href={i.href} className="text-sm text-muted hover:text-text">
                             {i.label}
-                        </Link>
+                        </a>
                     ))}
                 </nav>
 
