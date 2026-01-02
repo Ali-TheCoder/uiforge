@@ -2,10 +2,11 @@
 
 import { FormEvent, useState } from "react";
 import Button from "@/components/Button";
+import AnimatedDotsBackground from "@/components/animateddots";
 // import { useSearchParams } from "next/navigation";
 
 
-export default function ContactPage() {
+export default function Page() {
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState<string | null>(null);
     const [error, setError] = useState<string | null>(null);
@@ -52,10 +53,11 @@ export default function ContactPage() {
                     Tell us about your project and we’ll reply within 24 hours.
                 </p>
             </div>
+                <AnimatedDotsBackground>
 
             <form
                 onSubmit={handleSubmit}
-                className="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6"
+                className="space-y-4  border border-white/10 bg-white/5 p-6"
             >
                 <input
                     name="name"
@@ -103,6 +105,8 @@ export default function ContactPage() {
                 {success && <p className="text-sm text-green-400">{success}</p>}
                 {error && <p className="text-sm text-red-400">{error}</p>}
             </form>
+        </ AnimatedDotsBackground>
         </div>
+        
     );
 }
