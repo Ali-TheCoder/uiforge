@@ -1,4 +1,4 @@
-"use state"
+"use client"
 import { Card, CardContent } from "@/components/card";
 import { motion } from "motion/react";
 export default function About(){

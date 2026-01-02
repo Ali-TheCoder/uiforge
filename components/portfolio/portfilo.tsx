@@ -1,4 +1,4 @@
-"use state"
+"use client"
 import { motion } from "motion/react";
 import { Card, CardContent } from "../card";
 import Button from "@/components/Button";
@@ -6,7 +6,7 @@ const projects = [
     {"Name":"Elite-Sport" , "href":"https://elite-sport-beta.vercel.app/" , "descrption":"A fast, accessible marketing site with focus on performance.","img":"/Elite.png"},
     {"Name":"Ahmad Movahedi Portfilo" , "href":"https://ahmadmovahedi.vercel.app/" , "descrption":"Portfolio of Ahmad Movahedi . specializing in Next.js, React, and modern web development.","img":"/Ahmadmv.png"}
 ]
-export default function PorfolioSection () {
+export default function PortfolioSection () {
     return(
     <motion.section 
       id="portfolio"

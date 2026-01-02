@@ -1,0 +1,40 @@
+"use client"
+import Button from "@/components/Button";
+import { motion } from "motion/react"
+import Link from "next/link";
+export default function IntroSection () {
+    return <section className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black/10 p-8 md:p-12">
+        <div className="absolute inset-0 opacity-40 mask-[radial-gradient(600px_260px_at_30%_20%,black,transparent)]">
+          <div className="h-full w-full bg-[conic-gradient(from_180deg_at_50%_50%,var(--color-primary),var(--color-secondary),var(--color-accent),var(--color-primary))]" />
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="relative max-w-2xl space-y-5">
+          
+          <h1 className="text-3xl font-semibold tracking-tight md:text-5xl">
+            UI Forge builds elegant, fast websites that look premium—and sell.
+          </h1>
+          <p className="text-base text-muted md:text-lg">
+             Design & Development  crafting modern company sites, e-commerce storefronts,
+            and custom web apps with a strong UI system.
+          </p>
+
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Button href="/pricing">See Pricing</Button>
+            <Button href="/work" variant="ghost">
+              Explore Work
+            </Button>
+          </div>
+
+          <div className="pt-3 text-sm text-muted">
+            Or email us:{" "}
+            <Link className="text-text underline decoration-white/20 hover:decoration-white/50" href="/contact">
+              get in touch
+            </Link>
+          </div>
+        </motion.div>
+      </section>
+}
