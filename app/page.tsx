@@ -5,6 +5,7 @@ import PricingCards from "@/components/PricingCards";
 import { motion } from "motion/react"
 import About from "../components/about/about";
 import ProcessSection from "@/components/Process/process";
+import PorfolioSection from "@/components/portfolio/portfilo";
 export default function HomePage() {
   return (
     <div className="space-y-16">
@@ -18,9 +19,7 @@ export default function HomePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="relative max-w-2xl space-y-5">
-          <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-muted">
-            Next.js • Tailwind • TypeScript
-          </p>
+          
           <h1 className="text-3xl font-semibold tracking-tight md:text-5xl">
             UI Forge builds elegant, fast websites that look premium—and sell.
           </h1>
@@ -46,7 +45,8 @@ export default function HomePage() {
       </section>
       <About />
 
-     <ProcessSection />
+      <ProcessSection />
+      <PorfolioSection />
 
       <section className="space-y-5">
         <div className="flex items-end justify-between gap-4">

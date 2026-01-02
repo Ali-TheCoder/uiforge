@@ -1,5 +1,6 @@
+"use state"
 import { Card, CardContent } from "@/components/card";
-
+import { motion } from "motion/react";
 export default function About(){
     const teamMembers = [
     {
@@ -19,7 +20,16 @@ export default function About(){
   ];
 
   return (
-    <section id="about" className="flex flex-col justify-between rounded-[2rem] border border-white/10 bg-black/10 p-8 md:p-12">
+    <motion.section  
+     initial={{ opacity: 0, y: 60, scale: 0.96 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{
+        duration: 0.6,
+        ease: "easeOut",
+      }}
+    id="about"
+    className="flex flex-col justify-between rounded-[2rem] border border-white/10 bg-black/10 p-8 md:p-12">
     
         {/* Header Section */}
         <div className="text-start  flex flex-col items-start mb-16">
@@ -63,6 +73,6 @@ export default function About(){
           ))}
         </div>
 
-    </section>
+    </motion.section >
   );
 }

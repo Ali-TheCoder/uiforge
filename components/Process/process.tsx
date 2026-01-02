@@ -1,7 +1,17 @@
+"use client"
 import { CodeXml, Goal, Paintbrush, Rocket } from "lucide-react";
-
+import { motion } from "motion/react";
 export default function ProcessSection (){
-    return  <section id="process" className="flex flex-col rounded-[2rem] border border-white/10 bg-black/10 p-8 md:p-12">
+    return  <motion.section
+      initial={{ opacity: 0, y: 60, scale: 0.96 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{
+        duration: 0.6,
+        ease: "easeOut",
+      }}
+     id="process"
+     className="flex flex-col rounded-[2rem] border border-white/10 bg-black/10 p-8 md:p-12">
         <div className="text-start  flex flex-col items-start mb-5">
           <h1 className="mb-3 text-5xl mx-auto">Process</h1>
           <p className="
@@ -29,5 +39,5 @@ export default function ProcessSection (){
         ))}
         </div>
      
-      </section>
+      </motion.section>
 }
