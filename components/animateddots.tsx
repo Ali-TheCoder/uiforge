@@ -18,7 +18,7 @@ export default function AnimatedGlowDotsBackground({
     >
       {/* Glow gradients layer */}
       <motion.div
-        className="absolute inset-0"
+        className="absolute inset-0 rounded-[1rem]"
         animate={{
           backgroundPosition: [
             "0% 0%, 100% 0%, 50% 100%, center",
@@ -46,7 +46,7 @@ export default function AnimatedGlowDotsBackground({
         className="
           absolute inset-0
           bg-[radial-gradient(rgba(255,255,255,0.18)_1px,transparent_1px)]
-          bg-[size:20px_20px] 
+          bg-[size:20px_20px]  rounded-[1rem]
         "
         animate={{
           backgroundPosition: ["0px 0px", "200px 200px"],
