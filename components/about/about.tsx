@@ -15,7 +15,7 @@ export default function About(){
       name: "Ahmad Movahedi",
       role: "Lead Developer & Co-Founder",
       bio: "Ahmad brings technical excellence to every project, specializing in modern web technologies and scalable architecture that powers our client solutions.",
-      image: "/Ahmad.jpg"
+      image: "/Ahmad.jpeg"
     }
   ];
 
@@ -29,10 +29,10 @@ export default function About(){
         ease: "easeOut",
       }}
     id="about"
-    className="flex flex-col justify-between rounded-[2rem] border border-white/10 bg-black/10 p-8 md:p-12">
+    className="flex flex-col rounded-[2rem] border border-white/10 bg-black/10 p-8 md:p-12 ">
     
         {/* Header Section */}
-        <div className="text-start  flex flex-col items-start mb-16">
+        <div className="text-start flex flex-col items-start mb-8">
           <h1 className="mb-3 text-5xl mx-auto">About Us</h1>
           <p className="
             mx-auto
@@ -50,12 +50,12 @@ export default function About(){
 
         </div>
 
-        {/* Team Members Grid */}
-        <div className="grid md:grid-cols-2 gap-4">
+        {/* Team Members flex */}
+        <div className="flex justify-evenly gap-4">
           {teamMembers.map((member) => (
             <Card key={member.id} className="overflow-hidden hover:shadow-lg transition-shadow 
-            border-1 border-slate-700 duration-300 relative  rounded-3xl p-3 backdrop-blur-xl">
-              <div className="aspect-[1.4567] overflow-hidden  bg-slate-200">
+            border-1 border-slate-700 duration-300 relative  rounded-3xl p-3 backdrop-blur-x max-w-[30rem]">
+              <div className="aspect-[1.4567] overflow-hidden  bg-slate-200 ">
                 <img
                   src={member.image} 
                   alt={member.name}

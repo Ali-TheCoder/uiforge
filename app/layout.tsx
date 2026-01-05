@@ -53,13 +53,15 @@ function Background() {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col ">
         <Background />
+        <main className="mx-auto w-full flex flex-col items-center justify-center ">
         <Navbar />
-        <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-16 pt-10">
+          {/*  */}
           {children}
-        </main>
+          {/*  */}
         <Footer />
+        </main>
       </body>
     </html>
   );
