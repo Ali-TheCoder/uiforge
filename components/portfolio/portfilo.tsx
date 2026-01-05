@@ -3,8 +3,8 @@ import { motion } from "motion/react";
 import { Card, CardContent } from "../card";
 import Button from "@/components/Button";
 const projects = [
-    {"Name":"Elite-Sport" , "href":"https://elite-sport-beta.vercel.app/" , "descrption":"A fast, accessible marketing site with focus on performance.","img":"/Elite.png"},
-    {"Name":"Ahmad Movahedi Portfilo" , "href":"https://ahmadmovahedi.vercel.app/" , "descrption":"Portfolio of Ahmad Movahedi . specializing in Next.js, React, and modern web development.","img":"/Ahmadmv.png"}
+    {"Name":"Elite-Sport" , "href":"https://elite-sport-beta.vercel.app/" , "descrption":"A fast, accessible marketing site with focus on performance.","img":"/Elite.jpeg"},
+    {"Name":"Ahmad Movahedi Portfilo" , "href":"https://ahmadmovahedi.vercel.app/" , "descrption":"Portfolio of Ahmad Movahedi . specializing in Next.js, React, and modern web development.","img":"/Ahmadmv.jpeg"}
 ]
 export default function PortfolioSection () {
     return(

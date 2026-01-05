@@ -22,7 +22,7 @@ export default function Navbar() {
                 <Link href="/" className="group flex items-center gap-3">
                     <div className="relative h-11 w-11 overflow-hidden rounded-xl">
                         <img
-                            src="/logo.png"
+                            src="/logo.jpeg"
                             alt="UI Forge "
                             // 
                             className="object-contain"
