@@ -55,6 +55,7 @@ export default function Contact() {
                 duration: 0.6,
                 ease: "easeOut",
       }}
+      id="contact"
         className="flex md:flex-row flex-col justify-between gap-4 ">
             <div>
                 <h1 className="text-3xl font-semibold">Let's Work Together</h1>

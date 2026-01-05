@@ -1,9 +1,19 @@
-//
+'use client'
+import { motion } from "motion/react";
 import PricingCards from "../PricingCards";
 
 export default function PricingSection (){
     return (  
-     <div className="space-y-8">
+      <motion.section 
+            initial={{ opacity: 0, y: 60, scale: 0.96 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+                duration: 0.6,
+                ease: "easeOut",
+            }}
+            className="space-y-8" 
+            id="pricing">
             <div className="space-y-2">
                 <h1 className="text-3xl font-semibold">Pricing</h1>
                 <p className="text-muted">
@@ -22,6 +32,6 @@ export default function PricingSection (){
                     <li>• Deployment guidance (Vercel-ready)</li>
                 </ul>
             </div>
-        </div>
+        </motion.section>
       )
 }

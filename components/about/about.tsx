@@ -29,7 +29,7 @@ export default function About(){
         ease: "easeOut",
       }}
     id="about"
-    className="flex flex-col justify-between rounded-[2rem] border border-white/10 bg-black/10 p-8 md:p-12">
+    className="flex flex-col justify-between ">
     
         {/* Header Section */}
         <div className="text-start  flex flex-col items-start mb-16">
