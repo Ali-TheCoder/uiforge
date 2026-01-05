@@ -2,9 +2,12 @@
 import { motion } from "motion/react";
 import { Card, CardContent } from "../card";
 import Button from "@/components/Button";
+import Elite from "@/public/Elite.jpeg"
+import AhmadMV from "@/public/ahmadmv.jpeg"
+import Image from "next/image";
 const projects = [
-    {"Name":"Elite-Sport" , "href":"https://elite-sport-beta.vercel.app/" , "descrption":"A fast, accessible marketing site with focus on performance.","img":"/Elite.jpeg"},
-    {"Name":"Ahmad Movahedi Portfilo" , "href":"https://ahmadmovahedi.vercel.app/" , "descrption":"Portfolio of Ahmad Movahedi . specializing in Next.js, React, and modern web development.","img":"/Ahmadmv.jpeg"}
+    {"Name":"Elite-Sport" , "href":"https://elite-sport-beta.vercel.app/" , "descrption":"A fast, accessible marketing site with focus on performance.","img":Elite},
+    {"Name":"Ahmad Movahedi Portfilo" , "href":"https://ahmadmovahedi.vercel.app/" , "descrption":"Portfolio of Ahmad Movahedi . specializing in Next.js, React, and modern web development.","img":AhmadMV}
 ]
 export default function PortfolioSection () {
     return(
@@ -45,7 +48,7 @@ export default function PortfolioSection () {
             >
             {/* Image */}
             <div className="flex-shrink-0">
-                <img
+                <Image
                 src={i.img}
                 alt={i.Name}
                 className="

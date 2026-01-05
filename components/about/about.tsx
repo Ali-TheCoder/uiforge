@@ -1,6 +1,9 @@
 "use client"
 import { Card, CardContent } from "@/components/card";
 import { motion } from "motion/react";
+import ahmad from "@/public/Ahmad.jpeg"
+import Ali from "@/public/Ali.jpeg"
+import Image from "next/image";
 export default function About(){
     const teamMembers = [
     {
@@ -8,14 +11,14 @@ export default function About(){
       name: "ALi Attari",
       role: "Creative Director & Co-Founder",
       bio: "With over 5 years of experience in digital design, Ali leads our creative vision and ensures every project delivers exceptional user experiences.",
-      image: "/Ali.jpeg"
+      image: Ali
     },
     {
       id: 2,
       name: "Ahmad Movahedi",
       role: "Lead Developer & Co-Founder",
       bio: "Ahmad brings technical excellence to every project, specializing in modern web technologies and scalable architecture that powers our client solutions.",
-      image: "/Ahmad.jpeg"
+      image: ahmad
     }
   ];
 
@@ -56,7 +59,7 @@ export default function About(){
             <Card key={member.id} className="overflow-hidden hover:shadow-lg transition-shadow 
             border-1 border-slate-700 duration-300 relative  rounded-3xl p-3 backdrop-blur-x max-w-[30rem]">
               <div className="aspect-[1.4567] overflow-hidden  bg-slate-200 ">
-                <img
+                <Image
                   src={member.image} 
                   alt={member.name}
                   className="w-full h-full object-cover"

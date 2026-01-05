@@ -1,8 +1,9 @@
 "use client"
 import Link from "next/link";
 import Button from "@/components/Button";
-// 
+import logo from "@/public/LOGO.jpeg"
 import { useState } from "react";
+import Image from "next/image";
 
 const nav = [
     {href:"#about",label:"About",id:"5"},
@@ -21,8 +22,8 @@ export default function Navbar() {
                 {/* Logo */}
                 <Link href="/" className="group flex items-center gap-3">
                     <div className="relative h-11 w-11 overflow-hidden rounded-xl">
-                        <img
-                            src="/logo.jpeg"
+                        <Image
+                            src={logo}
                             alt="UI Forge "
                             // 
                             className="object-contain"
