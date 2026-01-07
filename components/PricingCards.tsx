@@ -48,15 +48,15 @@ export default function PricingCards() {
                         ))}
                     </ul>
 
-                    <div className="mt-5">
+                    {/* <div className="mt-5">
                         <Button
-                            href={`/contact?plan=${p.id}`}
+                            href={`#contact?plan=${p.id}`}
                             className={p.highlight ? "w-full" : "w-full bg-white/10 hover:bg-white/15 border border-white/10"}
                             variant={p.highlight ? "primary" : "ghost"}
                         >
                             Choose {p.name}
                         </Button>
-                    </div>
+                    </div> */}
                 </div>
             ))}
         </div>

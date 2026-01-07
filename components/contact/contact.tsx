@@ -4,28 +4,30 @@ import { FormEvent, useState } from "react";
 import Button from "@/components/Button";
 import AnimatedDotsBackground from "@/components/animateddots";
 import { motion } from "motion/react";
-// import { useSearchParams } from "next/navigation";
+
 
 
 export default function Contact() {
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState<string | null>(null);
     const [error, setError] = useState<string | null>(null);
-    // const searchParams = useSearchParams();
-    // const defaultPlan = searchParams.get("plan");
 
-
-   
     async function handleSubmit(e: FormEvent<HTMLFormElement>) { 
         e.preventDefault();
+
+        const form = e.currentTarget;
+
         setLoading(true);
         setSuccess(null);
         setError(null);
 
-        const formData = new FormData(e.currentTarget);
+        const formData = new FormData(form);
 
         const res = await fetch("/api/contact", {
             method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
             body: JSON.stringify({
                 name: formData.get("name"),
                 email: formData.get("email"),
@@ -43,7 +45,7 @@ export default function Contact() {
         }
 
         setSuccess("Message sent successfully. We'll get back to you soon.");
-        e.currentTarget.reset();
+        form.reset();
     }
 
     return (
@@ -114,7 +116,7 @@ export default function Contact() {
                         className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 outline-none"
                     />
 
-                    <Button className="w-full" type="submit">
+                    <Button className="w-full" type="submit" disabled={loading}>
                         {loading ? "Sending..." : "Send Message"}
                     </Button>
 
