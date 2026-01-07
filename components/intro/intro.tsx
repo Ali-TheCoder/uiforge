@@ -15,16 +15,15 @@ export default function IntroSection () {
           className="relative max-w-2xl space-y-5">
           
           <h1 className="text-3xl font-semibold tracking-tight md:text-5xl">
-            UI Forge builds elegant, fast websites that look premium—and sell.
+          UI Forge designed Websites to convert visitors into customers.
           </h1>
           <p className="text-base text-muted md:text-lg">
-             Design & Development  crafting modern company sites, e-commerce storefronts,
-            and custom web apps with a strong UI system.
+            Strategy-led websites for personal brands, e-commerce brands, and growing companies.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button href="/pricing">See Pricing</Button>
-            <Button href="/work" variant="ghost">
+            <Button href="#pricing">See Plans</Button>
+            <Button href="#portfolio" variant="ghost">
               Explore Work
             </Button>
           </div>
