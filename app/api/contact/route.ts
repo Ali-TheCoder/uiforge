@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
     try {
@@ -11,18 +12,34 @@ export async function POST(req: Request) {
             );
         }
 
-        // اینجا بعداً ایمیل می‌فرستیم
-        console.log("New contact form:", {
-            name,
-            email,
-            plan,
-            message,
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: process.env.EMAIL_USER, // kevetsahedrakh@hotmail.com
+                pass: process.env.EMAIL_PASS,
+            },
         });
 
+        await transporter.sendMail({
+            from: `"Contact Form" <${process.env.EMAIL_USER}>`, // MUST be yours
+            to: "uiforge.team@gmail.com",
+            replyTo: email, // user email
+            subject: "New Contact Form Message",
+            text: `
+            Name: ${name}
+            Email: ${email}
+            Plan: ${plan}
+
+            Message:
+            ${message}
+                        `,
+             });
+
         return NextResponse.json({ success: true });
-    } catch (err) {
+    } catch (error) {
+        console.error(error);
         return NextResponse.json(
-            { error: "Server error" },
+            { error: "Email failed" },
             { status: 500 }
         );
     }
