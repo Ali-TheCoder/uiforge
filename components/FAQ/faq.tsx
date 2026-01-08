@@ -13,7 +13,7 @@ export default function FAQ () {
         ease: "easeOut",
       }}
     id="faq"
-    className="flex flex-col gap-5">
+    className="flex flex-col gap-5 p-8 md:p-12">
         <div className="text-center mb-12">
           <h1 className="mb-3 text-5xl mx-auto">Frequently Asked Questions</h1>
           <p className=" mx-auto

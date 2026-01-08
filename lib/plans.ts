@@ -13,7 +13,7 @@ export const plans: Plan[] = [
     {
         id: "landing page",
         name: "Landing page",
-        tagline: "A polished Landing page that converts.",
+        tagline: "A polished page that converts.",
         priceFrom: 1200,
         delivery: "7–12 days",
         bestFor: "coachs, Agencies, studios, consultants",
@@ -45,7 +45,7 @@ export const plans: Plan[] = [
     {
         id: "personal brand",
         name: "Personal Branding",
-        tagline: "A tailored build for your personal brand.",
+        tagline: "A tailored build for your brand.",
         priceFrom: 2000,
         delivery: "10–20 days",
         bestFor: "Business owners, Entrepreneurs",

@@ -28,7 +28,7 @@ export default function PortfolioSection () {
         </div>
 
         {/*content Section */}
-        <div className="flex flex-col gap-4 max-w-5xl ">
+        <div className="flex flex-col gap-4  ">
            {projects.map((i)=>{
             return(<Card
             key={i.Name}

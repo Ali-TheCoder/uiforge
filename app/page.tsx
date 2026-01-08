@@ -9,7 +9,7 @@ import FAQ from "@/components/FAQ/faq";
 export default function HomePage() {
   return (
     
-    <div className=" px-4 pb-16 pt-10 max-w-6xl space-y-16">
+    <div className=" px-4 pb-16 pt-10 max-w-6xl space-y-10">
       <IntroSection />
       <About />
 
