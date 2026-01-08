@@ -1,4 +1,4 @@
-import Button from "@/components/Button";
+// import Button from "@/components/Button";
 import { plans } from "@/lib/plans";
 
 export default function PricingCards() {
