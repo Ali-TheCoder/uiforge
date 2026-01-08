@@ -1,5 +1,5 @@
 export type Plan = {
-    id: "corporate" | "ecommerce" | "custom";
+    id: "corporate" | "ecommerce" | "custom" | "personal brand" | "landing page";
     name: string;
     tagline: string;
     priceFrom: number;
@@ -11,18 +11,18 @@ export type Plan = {
 
 export const plans: Plan[] = [
     {
-        id: "corporate",
-        name: "Corporate Website",
-        tagline: "A polished company site that converts.",
+        id: "landing page",
+        name: "Landing page",
+        tagline: "A polished page that converts.",
         priceFrom: 1200,
         delivery: "7–12 days",
-        bestFor: "Agencies, studios, consultants",
+        bestFor: "coachs, Agencies, studios, consultants",
         features: [
-            "Up to 6 pages (Home, About, Services, Work, Blog, Contact)",
-            "Responsive UI + performance-first build",
-            "SEO essentials + analytics setup",
-            "CMS-ready structure (optional)",
-            "2 rounds of revisions",
+           " Custom Coding",
+           " Conversion Optimization",
+           " Strategic Copywriting",
+           " Revisions until Loving",
+           " 1 Month of FREE Support"
         ],
     },
     {
@@ -32,20 +32,38 @@ export const plans: Plan[] = [
         priceFrom: 2800,
         delivery: "14–25 days",
         bestFor: "Brands, shops, product teams",
-        highlight: true,
+        highlight: false,
         features: [
             "Product listing + product page templates",
             "Cart & checkout integration (Stripe-ready)",
             "Collections, search, filters",
             "Admin/CMS integration option",
             "3 rounds of revisions",
+            "2 Months of FREE Support"
+        ],
+    },
+    {
+        id: "personal brand",
+        name: "Personal Branding",
+        tagline: "A tailored build for your brand.",
+        priceFrom: 2000,
+        delivery: "10–20 days",
+        bestFor: "Business owners, Entrepreneurs",
+        highlight: false,
+        features: [
+        "5-7 page included",   
+        "Custom Coding",
+        "Branding Strategy",
+        "Strategic Copywriting",
+        "Revisions until Loving",
+        "2 Months of FREE Support"
         ],
     },
     {
         id: "custom",
         name: "Custom Web App",
         tagline: "A tailored build for your workflow.",
-        priceFrom: 3500,
+        priceFrom: 3000,
         delivery: "Depends on scope",
         bestFor: "Startups & internal tools",
         features: [
@@ -56,4 +74,5 @@ export const plans: Plan[] = [
             "Dedicated support window",
         ],
     },
+    
 ];

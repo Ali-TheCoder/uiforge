@@ -30,7 +30,7 @@ export default function IntroSection () {
 
           <div className="pt-3 text-sm text-muted">
             Or email us:{" "}
-            <Link className="text-text underline decoration-white/20 hover:decoration-white/50" href="/contact">
+            <Link className="text-text underline decoration-white/20 hover:decoration-white/50" href="#contact">
               get in touch
             </Link>
           </div>

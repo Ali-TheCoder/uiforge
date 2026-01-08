@@ -1,9 +1,9 @@
-import Button from "@/components/Button";
+// 
 import { plans } from "@/lib/plans";
 
 export default function PricingCards() {
     return (
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-4">
             {plans.map((p) => (
                 <div
                     key={p.id}

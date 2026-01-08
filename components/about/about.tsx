@@ -38,8 +38,8 @@ export default function About(){
         <div className="text-start flex flex-col items-start mb-8">
           <h1 className="mb-3 text-5xl mx-auto">About Us</h1>
           <p className="
-            mx-auto
-            max-w-xl sm:max-w-2xl lg:max-w-3xl
+     
+            w-auto
             px-4 sm:px-0
             text-sm sm:text-base lg:text-lg
             leading-relaxed sm:leading-7 lg:leading-8
@@ -54,7 +54,7 @@ export default function About(){
         </div>
 
         {/* Team Members flex */}
-        <div className="flex justify-evenly gap-4">
+        <div className="flex flex-col justify-between sm:flex-row gap-4">
           {teamMembers.map((member) => (
             <Card key={member.id} className="overflow-hidden hover:shadow-lg transition-shadow 
             border-1 border-slate-700 duration-300 relative  rounded-3xl p-3 backdrop-blur-x max-w-[30rem]">

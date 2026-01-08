@@ -1,5 +1,5 @@
 "use client";
-
+import { plans } from "@/lib/plans";
 import { FormEvent, useState } from "react";
 import Button from "@/components/Button";
 import AnimatedDotsBackground from "@/components/animateddots";
@@ -58,7 +58,7 @@ export default function Contact() {
                 ease: "easeOut",
       }}
       id="contact"
-        className="flex md:flex-row flex-col justify-between gap-4 ">
+        className="flex md:flex-row flex-col justify-between gap-4 p-8 md:p-12">
             <div>
                 <h1 className="text-3xl font-semibold">Let's Work Together</h1>
                 <p className="mt-4 max-w-3xl text-muted/90 leading-loose">
@@ -96,15 +96,13 @@ export default function Contact() {
                         name="plan"
                         className="w-full pr-2 rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-text outline-none focus:border-secondary/50"
                     >
-                        <option value="corporate" className="bg-bg text-white">
-                            Corporate Website
-                        </option>
-                        <option value="ecommerce" className="bg-bg text-white">
-                            E-commerce Store
-                        </option>
-                        <option value="custom" className="bg-bg text-white">
-                            Custom Web App
-                        </option>
+                        {plans.map((i)=>{
+                            return (
+                            <option key={i.id} value={i.name} className="bg-bg text-white">
+                                {i.name}
+                            </option>
+                            )
+                        })}
 
                     </select>
 

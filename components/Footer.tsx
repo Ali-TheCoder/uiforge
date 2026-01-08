@@ -4,9 +4,10 @@ export default function Footer() {
             <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-muted md:flex-row md:items-center md:justify-between">
                 <div>© {new Date().getFullYear()} UI Forge. All rights reserved.</div>
                 <div className="flex gap-4">
-                    <a className="hover:text-text" href="/pricing">Pricing</a>
-                    <a className="hover:text-text" href="/work">Work</a>
-                    <a className="hover:text-text" href="/contact">Contact</a>
+                    <a className="hover:text-text" href="#pricing">Pricing</a>
+                    <a className="hover:text-text" href="#portfolio">Work</a>
+                    <a className="hover:text-text" href="#contact">Contact</a>
+                    <a className="hover:text-text" href="https://www.linkedin.com/in/ahmad-movahedi-31b986265/">Linkedin</a>
                 </div>
             </div>
         </footer>

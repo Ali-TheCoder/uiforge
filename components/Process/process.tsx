@@ -25,7 +25,7 @@ export default function ProcessSection (){
             <span> Let’s follow this structured yet flexible process to make your vision great.</span>
             </p>
         </div>
-        <div className="grid gap-4 md:grid-cols-4">
+        <div className="grid gap-2 md:grid-cols-4">
         {[
           { t: "Assessment", d: "Get access to your client portal, share your vision, and receive a custom proposal.",i:<Goal /> },
           { t: "Design a clean UI", d: "We craft a design strategy and help you provide the necessary content. Then I bring it all together to do a perfect design.",i:<Paintbrush /> },
