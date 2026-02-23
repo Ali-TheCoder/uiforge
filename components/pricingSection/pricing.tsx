@@ -12,7 +12,7 @@ export default function PricingSection (){
                 duration: 0.6,
                 ease: "easeOut",
             }}
-            className="space-y-8 p-8 md:p-12" 
+            className="space-y-8" 
             id="pricing">
             <div className="space-y-2">
                 <h1 className="text-3xl font-semibold">Pricing</h1>

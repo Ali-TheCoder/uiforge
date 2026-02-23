@@ -20,7 +20,7 @@ export default function PortfolioSection () {
         duration: 0.6,
         ease: "easeOut",
       }}
-    className="flex flex-col justify-between  p-8 md:p-12">
+    className="flex flex-col justify-between ">
          {/* Header Section */}
         <div className="text-start flex flex-col items-start mb-12">
           <h1 className="mb-3 text-5xl mx-auto">Portfolio</h1>

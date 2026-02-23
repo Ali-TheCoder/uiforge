@@ -58,7 +58,7 @@ export default function Contact() {
                 ease: "easeOut",
       }}
       id="contact"
-        className="flex md:flex-row flex-col justify-between gap-4 p-8 md:p-12">
+        className="flex md:flex-row flex-col justify-between gap-4">
             <div>
                 <h1 className="text-3xl font-semibold">Let's Work Together</h1>
                 <p className="mt-4 max-w-3xl text-muted/90 leading-loose">
