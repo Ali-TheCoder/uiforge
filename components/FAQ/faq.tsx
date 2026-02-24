@@ -28,8 +28,8 @@ export default function FAQ () {
       <div className="flex justify-between md:flex-row flex-col gap-10 ">
        
         <Accordion type="single" collapsible className="w-full rounded-[2rem] border border-white/10 bg-black/10 p-8 md:p-12">
-          {faqs_1.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
+          {faqs_1.map((faq) => (
+            <AccordionItem key={`faq1-${faq.id}`} value={`faq1-item-${faq.id}`}>
               <AccordionTrigger>{faq.question}</AccordionTrigger>
               <AccordionContent className="max-w-full">
                 {faq.answer}
@@ -39,8 +39,8 @@ export default function FAQ () {
         </Accordion>
 
         <Accordion type="single" collapsible className="w-full rounded-[2rem] border border-white/10 bg-black/10 p-8 md:p-12">
-          {faqs_2.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
+          {faqs_2.map((faq) => (
+            <AccordionItem key={`faq2-${faq.id}`} value={`faq2-item-${faq.id}`}>
               <AccordionTrigger >{faq.question}</AccordionTrigger>
               <AccordionContent className="max-w-full ">
                 {faq.answer}

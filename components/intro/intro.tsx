@@ -3,7 +3,7 @@ import Button from "@/components/Button";
 import { motion } from "motion/react"
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/converted_image.svg"
+import logo from "@/public/introicone.png"
 export default function IntroSection () {
     return <motion.section 
       initial={{ opacity: 0, y: 60, scale: 0.96 }}
